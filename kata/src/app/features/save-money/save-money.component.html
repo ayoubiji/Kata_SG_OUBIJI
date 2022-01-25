@@ -1,1 +1,13 @@
-<p>save-money works!</p>
+<form [formGroup]="myForm" (ngSubmit)="save(myForm)">
+  <div class="form-group">
+    <label>
+      Amount:
+      <input
+        class="form-control"
+        formControlName="amount"
+        placeholder="Amount"
+      />
+    </label>
+  </div>
+  <button class="btn btn-primary" type="submit">Save</button>
+</form>

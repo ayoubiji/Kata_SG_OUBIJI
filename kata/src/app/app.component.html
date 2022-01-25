@@ -17,3 +17,23 @@
     </ul>
   </div>
 </nav>
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto" *ngIf="customer">
+        <p class="lead text-muted">
+          {{ customer.firstname }} {{ customer.lastName }}
+        </p>
+        <p class="lead text-muted">Balance :{{ customer.account.balance }}</p>
+        <p class="lead text-muted">
+          Date: {{ customer.account.date | date: "dd/MM/yyyy" }}
+        </p>
+      </div>
+    </div>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </section>
+</main>

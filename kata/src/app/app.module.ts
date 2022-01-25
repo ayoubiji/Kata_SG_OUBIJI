@@ -9,12 +9,19 @@ import { StoreModule } from '@ngrx/store';
 import { SaveMoneyComponent } from './features/save-money/save-money.component';
 import { RetrieveComponent } from './features/retrieve/retrieve.component';
 import { OperationsComponent } from './features/operations/operations.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, SaveMoneyComponent, RetrieveComponent, OperationsComponent],
+  declarations: [
+    AppComponent,
+    SaveMoneyComponent,
+    RetrieveComponent,
+    OperationsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     StoreModule.forRoot(reducers, {
       initialState,
     }),

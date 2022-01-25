@@ -7,12 +7,11 @@ export interface MainState {
 export const initialState: MainState = {
   operations: [],
   customer: {
-    firstname: null,
-    lastName: null,
+    firstname: 'Ayoub',
+    lastName: 'Oubiji',
     account: {
-      balance: 0,
-      amount: 0,
-      date: null,
+      balance: 100,
+      date: new Date(),
     },
   },
 };
