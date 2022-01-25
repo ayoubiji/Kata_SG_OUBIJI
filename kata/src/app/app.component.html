@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"> Save Money</a>
+  <a class="navbar-brand" [routerLink]="['/']"> Save Money</a>
 
   <button class="navbar-toggler" type="button">
     <span class="navbar-toggler-icon"></span>
@@ -8,11 +8,11 @@
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Retrieve Money</a>
+        <a class="nav-link" [routerLink]="['/retrieve']">Retrieve Money</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">My Operations</a>
+        <a class="nav-link" [routerLink]="['/operations']">My Operations</a>
       </li>
     </ul>
   </div>

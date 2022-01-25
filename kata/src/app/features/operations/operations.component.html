@@ -1,1 +1,18 @@
-<p>operations works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Amount</th>
+      <th scope="col">Balance</th>
+      <th scope="col">Date</th>
+      <th scope="col">operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let op of operations">
+      <td>{{ op.amount }}</td>
+      <td>{{ op.balance }}</td>
+      <td>{{ op.date }}</td>
+      <td>{{ op.operation }}</td>
+    </tr>
+  </tbody>
+</table>
