@@ -18,7 +18,7 @@ export class AccountService {
     });
     this.store.select('operations').subscribe((o) => {
       this.operations = o;
-      console.log('o',o)
+      console.log('o', o);
     });
   }
   saveMoney(amount: number) {
@@ -28,12 +28,17 @@ export class AccountService {
       ...{ balance },
     };
     this.store.dispatch(new GetCusomer({ customer: this.customer }));
-
-    this.operations.push({
-      ...this.customer.account,
-      ...{ amount, typeOfOperation: 'Save' },
-    });
-    this.store.dispatch(new GetOperations({ operations: this.operations }));
+    this.store.dispatch(
+      new GetOperations({
+        operations: [
+          ...this.operations,
+          {
+            ...this.customer.account,
+            ...{ amount, typeOfOperation: 'Save' },
+          },
+        ],
+      })
+    );
   }
   retrieveMoney(amount: number) {
     let balance = this.customer.account.balance - Number(amount);
